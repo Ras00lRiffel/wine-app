@@ -16,12 +16,35 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+}
+input {
+  border: 1px solid;
+}
+
+.login-form {
+  margin: auto;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  transform: translate(60%, -50%);
+}
+
+.login-form input {
+  width: 100%;
+}
+
+.login-form button {
+  width: 100%;
+}
+
+h1 {
+  font-size: 50px;;
 }
