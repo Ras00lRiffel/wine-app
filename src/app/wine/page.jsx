@@ -34,7 +34,6 @@ export default async function Home() {
                     <tbody >
                         {
                             wines.map((wine) => {
-                                console.log("Wine Id" + wine.id);
                                 let consumed;
                                 {
                                     wine.consumed ? (consumed = "Yes") : (consumed = "No")

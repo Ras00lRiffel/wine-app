@@ -23,7 +23,6 @@ export default function EditWine() {
 
     const datas = (formData) => {
         value.then((a) => {
-            console.log(a.name)
             formData.name = a.name
         })
     }
@@ -77,8 +76,6 @@ export default function EditWine() {
             console.error(error);
         }
 
-        // You can perform any actions with the form data here
-        console.log('Form submitted:', formData);
         // Reset the form after submission
         setFormData({
             name: '',

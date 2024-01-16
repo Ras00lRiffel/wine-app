@@ -61,8 +61,6 @@ export default function CreateWine() {
             console.error(error);
         }
 
-        // You can perform any actions with the form data here
-        console.log('Form submitted:', formData);
         // Reset the form after submission
         setFormData({
             name: '',

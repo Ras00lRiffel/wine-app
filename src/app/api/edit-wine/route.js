@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
-import prisma from "../../../../../lib/prisma"
+import prisma from "../../../../lib/prisma"
 
-export async function DELETE(request, { params }) {
+export async function UPDATE(request, { params }) {
     const id = params.id
-    console.log(id);
 
     const post = await prisma.post.findMany({
         where: { id }
