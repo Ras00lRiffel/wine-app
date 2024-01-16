@@ -1,5 +1,6 @@
 import Wine from '../../components/Wine/Wine';
 import Link from "next/link";
+import prisma from '../../../lib/prisma';
 
 async function getWines() {
     const wines = await prisma.wine.findMany({})
