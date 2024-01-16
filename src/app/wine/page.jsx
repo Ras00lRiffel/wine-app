@@ -34,7 +34,7 @@ export default async function Home() {
                         {
                             wines.map((wine) => {
                                 return (
-                                    <Wine id={wine.id} name={wine.name} year={wine.year} type={wine.type} varietal={wine.variental} rating={wine.rating} consumed={wine.consumed} />
+                                    <Wine key={wine.id} id={wine.id} name={wine.name} year={wine.year} type={wine.type} varietal={wine.variental} rating={wine.rating} consumed={wine.consumed} />
                                 )
                             })
                         }
