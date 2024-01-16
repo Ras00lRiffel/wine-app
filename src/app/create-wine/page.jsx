@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 const router = useRouter();
 
-export default function createWine() {
+export default function CreateWine() {
 
     // State to store user input
     const [formData, setFormData] = useState({
