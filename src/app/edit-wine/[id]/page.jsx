@@ -1,21 +1,37 @@
 'use client'
 import Input from "@/components/Input/Input";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
+import { GetWine } from "./data";
 
-export default function CreateWine() {
+export default function EditWine() {
 
     const router = useRouter();
-    // State to store user input
+    const pathname = usePathname()
+    const data = GetWine(parseInt(pathname.replace("/edit-wine/", "")));
     const [formData, setFormData] = useState({
         name: '',
-        year: '',
-        type: '',
-        varietal: '',
-        rating: 3.0,
-        consumed: false,
+        year: data.year,
+        type: data.type,
+        varietal: data.varietal,
+        rating: data.rating,
+        consumed: data.consumed,
     });
+
+    const value = data.then((val) => { return val });
+
+    const datas = (formData) => {
+        value.then((a) => {
+            console.log(a.name)
+            formData.name = a.name
+        })
+    }
+
+    datas(formData);
+
+    // State to store user input
+
 
     // Function to handle input changes
     const handleInputChange = (e) => {
@@ -49,7 +65,7 @@ export default function CreateWine() {
         e.preventDefault();
 
         try {
-            const res = fetch('/api/create-wine', {
+            fetch(`/ api / edit - wine / ${postId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

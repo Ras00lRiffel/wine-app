@@ -9,7 +9,7 @@ export default function Post({ id, name, year, type, varietal, rating, consumed,
             <td className="text-center p-3 border-b">{rating}</td>
             <td className="text-center p-3 border-b">{consumed}</td>
             <td className="text-center p-3 border-b">{dateConsumed}</td>
-            <td className="text-center p-3 border-b"><a href="#" className="">Edit</a></td>
-        </tr>
+            <td className="text-center p-3 border-b"><a href={"/edit-wine/" + id} >Edit</a></td>
+        </tr >
     )
 }

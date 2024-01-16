@@ -16,7 +16,7 @@ model Wine {
   year         String
   type         String
   varietal     String
-  rating       Decimal   @default(0.0)
+  rating       Float     @default(0.0)
   consumed     Boolean   @default(false)
   DateConsumed DateTime? @default(now()) @map(name: "date_consumed")
   createdAt    DateTime  @default(now()) @map(name: "created_at")

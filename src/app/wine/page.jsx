@@ -34,8 +34,13 @@ export default async function Home() {
                     <tbody >
                         {
                             wines.map((wine) => {
+                                console.log("Wine Id" + wine.id);
+                                let consumed;
+                                {
+                                    wine.consumed ? (consumed = "Yes") : (consumed = "No")
+                                }
                                 return (
-                                    <Wine key={wine.id} id={wine.id} name={wine.name} year={wine.year} type={wine.type} varietal={wine.variental} rating={wine.rating} consumed={wine.consumed} />
+                                    <Wine key={wine.id} id={wine.id} name={wine.name} year={wine.year} type={wine.type} varietal={wine.varietal} rating={wine.rating} consumed={consumed} />
                                 )
                             })
                         }
