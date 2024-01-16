@@ -2,6 +2,7 @@
 import Input from "@/components/Input/Input";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function CreateWine() {
 
@@ -77,7 +78,10 @@ export default function CreateWine() {
 
     return (
         <div className="container">
-            <h1 className="w-1/2 m-auto">Add/Edit Wine</h1>
+            <div className="w-1/2 m-auto">
+                <Link href="/wine">Go back</Link>
+                <h1>Add/Edit Wine</h1>
+            </div>
             <form method="POST" onSubmit={handleSubmit}>
                 <div className="space-y-12">
                     <div className="w-1/2 m-auto">
