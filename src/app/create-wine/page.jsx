@@ -3,9 +3,9 @@ import Input from "@/components/Input/Input";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function createWine() {
+const router = useRouter();
 
-    const router = useRouter();
+export default function createWine() {
 
     // State to store user input
     const [formData, setFormData] = useState({
