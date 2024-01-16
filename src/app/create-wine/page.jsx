@@ -3,8 +3,6 @@ import Input from "@/components/Input/Input";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const router = useRouter();
-
 export default function CreateWine() {
     const router = useRouter();
 
